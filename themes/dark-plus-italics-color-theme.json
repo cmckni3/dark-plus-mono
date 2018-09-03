@@ -455,8 +455,8 @@
         "keyword.operator.sizeof",
         "keyword.operator.instanceof",
         "keyword.operator.logical.python",
-        "variable.language.this",
-        "storage.types"
+        "storage.type",
+        "variable.language.this"
       ],
       "settings": {
         "foreground": "#569cd6",
