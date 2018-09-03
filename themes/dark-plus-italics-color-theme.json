@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Dark+ Operator Mono Light",
+  "name": "Dark+ Mono",
   "type": "dark",
   "colors": {
     "editor.background": "#1E1E1E",

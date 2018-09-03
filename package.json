@@ -1,14 +1,14 @@
 {
-  "name": "dark-plus-with-italics",
+  "name": "dark-plus-mono",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fab1o/dark-plus-with-italics.git"
+    "url": "https://github.com/cmckni3/dark-plus-mono.git"
   },
-  "displayName": "Dark+ Theme With Italics (Operator)",
+  "displayName": "Dark+ Mono",
   "description":
-    "Updated Dark+ Theme with Some Italics and No Bolds. Perfect for 'Operator Mono Light'",
-  "version": "2.0.2",
-  "publisher": "fab1o",
+    "Updated Dark+ Theme with Some Italics and No Bolds. Perfect for 'Operator Mono' and 'Dank Mono'",
+  "version": "1.0.0",
+  "publisher": "cmckni3",
   "engines": {
     "vscode": "^1.20.0"
   },
@@ -20,7 +20,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Dark+ with Italics",
+        "label": "Dark+ Mono",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-plus-italics-color-theme.json"
       }
