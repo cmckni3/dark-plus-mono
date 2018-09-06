@@ -3,5 +3,5 @@
 .gitignore
 *.log
 *.lock
-.travis-ci.yml
+.travis.yml
 
