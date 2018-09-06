@@ -5,9 +5,8 @@
     "url": "https://github.com/cmckni3/dark-plus-mono.git"
   },
   "displayName": "Dark+ Mono",
-  "description":
-    "Updated Dark+ Theme with Some Italics and No Bolds. Perfect for 'Operator Mono' and 'Dank Mono'",
-  "version": "1.0.2",
+  "description": "Updated Dark+ Theme with Some Italics and No Bolds. Perfect for 'Operator Mono' and 'Dank Mono'",
+  "version": "1.0.3",
   "publisher": "cmckni3",
   "engines": {
     "vscode": "^1.20.0"
@@ -16,7 +15,9 @@
     "deploy": "vsce publish"
   },
   "icon": "icon.png",
-  "categories": ["Themes"],
+  "categories": [
+    "Themes"
+  ],
   "contributes": {
     "themes": [
       {
