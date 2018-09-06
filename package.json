@@ -7,7 +7,7 @@
   "displayName": "Dark+ Mono",
   "description":
     "Updated Dark+ Theme with Some Italics and No Bolds. Perfect for 'Operator Mono' and 'Dank Mono'",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "cmckni3",
   "engines": {
     "vscode": "^1.20.0"
