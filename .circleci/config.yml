@@ -1,35 +1,29 @@
-version: 2.1
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8
 
 jobs:
-  build:
-    docker:
-      - image: circleci/node:8
-
-    working_directory: ~/repo
-
+  deploy:
+    <<: *defaults
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn global add vsce
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      
+      - run:
+          name: Install vsce
+          command: yarn global add vsce
+      
+      - run:
+          name: Publish extension
+          command: vsce publish -p $VSCE_TOKEN
 
 workflows:
   version: 2
-  deploy:
+  extension-deploy:
     jobs:
-      - build:
-          command: vsce publish -p $VSCE_TOKEN
+      - deploy:
           filters:
             tags:
               only: /^v.*/
