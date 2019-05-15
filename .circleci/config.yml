@@ -1,4 +1,5 @@
-version: 2
+version: 2.1
+
 jobs:
   build:
     docker:
@@ -22,3 +23,14 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          command: vsce publish -p $VSCE_TOKEN
+          filters:
+            tags:
+              only: /^v.*/
+
