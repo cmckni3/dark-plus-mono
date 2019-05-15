@@ -25,6 +25,6 @@ workflows:
     jobs:
       - deploy:
           filters:
-            tags:
-              only: /^v.*/
+              tags:
+                  only: /^v.*/
 
