@@ -1,0 +1,36 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8
+
+jobs:
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      
+      - run:
+          name: Install vsce
+          command: |
+            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+            source $BASH_ENV
+            yarn global add vsce
+      
+      - run:
+          name: Publish extension
+          command: vsce publish -p $VSCE_TOKEN
+
+workflows:
+  version: 2
+  extension-deploy:
+    jobs:
+      - deploy:
+          filters:
+            # ignore any commit on any branch by default
+            branches:
+              ignore: /.*/
+            # only act on version tags
+            tags:
+              only: /^v.*/
