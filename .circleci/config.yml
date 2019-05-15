@@ -13,7 +13,10 @@ jobs:
       
       - run:
           name: Install vsce
-          command: yarn global add vsce
+          command: |
+            echo 'export PATH=$(yarn global bin):$PATH' >> $BASH_ENV
+            source $BASH_ENV
+            yarn global add vsce
       
       - run:
           name: Publish extension
