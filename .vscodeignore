@@ -4,4 +4,6 @@
 *.log
 *.lock
 .travis.yml
+.circleci/**
+.github/**
 
